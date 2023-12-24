@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse follower</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="cursor-png-ico-icns-free-icon-download--icon100m-20.png">
+    <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
+    <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 data-cursor-text="🖐" data-cursor-stick>Welcome!!!</h1>
+      <p data-cursor-hide>
+        This is my first project where i use a js library! the mouse follower
+        can add alot to a website's design and very easily enhance it!
+      </p>
+      <div class="images">
+        <div
+          class="showimagetown"
+          data-cursor-img="https://images.unsplash.com/photo-1701762292571-2875f1e522b6?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        >
+          See image!!!
+        </div>
+        <div
+          class="showimagefireworks"
+          data-cursor-img="https://images.unsplash.com/photo-1703343872540-af08e5a6d703?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        >
+          Happy new year!!!
+        </div>
+      </div>
+    </div>
+    <footer id="credits">
+      Photo by
+      <a
+        href="https://unsplash.com/@mosdesign?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+        >mos design</a
+      >
+      and
+      <a
+        href="https://unsplash.com/@luciagaro?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+        >Lucía Garó</a
+      >
+      on
+      <a
+        href="https://unsplash.com/photos/a-city-street-filled-with-lots-of-tall-buildings-D-u6NIAU_5A?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+        >Unsplash</a
+      >
+    </footer>
+    <script>
+      const cursor = new MouseFollower({
+        el: null,
+        container: document.body,
+        className: "mf-cursor",
+        innerClassName: "mf-cursor-inner",
+        textClassName: "mf-cursor-text",
+        mediaClassName: "mf-cursor-media",
+        mediaBoxClassName: "mf-cursor-media-box",
+        iconSvgClassName: "mf-svgsprite",
+        iconSvgNamePrefix: "-",
+        iconSvgSrc: "",
+        dataAttr: "cursor",
+        hiddenState: "-hidden",
+        textState: "-text",
+        iconState: "-icon",
+        activeState: "-active",
+        mediaState: "-media",
+        stateDetection: {
+          "-pointer": "a,button",
+          "-hidden": "iframe",
+        },
+        visible: true,
+        visibleOnState: false,
+        speed: 0.55,
+        ease: "expo.out",
+        overwrite: true,
+        skewing: 0,
+        skewingText: 0,
+        skewingIcon: 2,
+        skewingMedia: 2,
+        skewingDelta: 0.001,
+        skewingDeltaMax: 0.15,
+        stickDelta: 0.15,
+        showTimeout: 20,
+        hideOnLeave: true,
+        hideTimeout: 300,
+        hideMediaTimeout: 300,
+      });
+    </script>
+  </body>
+</html>
